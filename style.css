@@ -1,0 +1,448 @@
+*,
+* {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+}
+
+/* header */
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_block {
+  margin-right: 500px;
+}
+
+.nav {
+  margin-right: 20px;
+}
+
+.logo {
+  width: 105px;
+  height: 40px;
+}
+
+.nav_all,
+.bot_nav {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.nav_item {
+  display: inline;
+  margin-right: 15px;
+}
+
+.expand_menu {
+  position: relative;
+  margin-right: 28px;
+}
+
+.nav_all a,
+.bot_nav a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.nav_item a:hover {
+  border-bottom: 2px solid rgb(145, 12, 189);
+}
+
+.expand_menu:hover .arrow_down {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+.expand_menu:not(:hover) .arrow_down {
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.arrow_down {
+  min-width: 10px;
+  right: -13px;
+  height: 8px;
+  top: 7px;
+  position: absolute;
+}
+
+.arrow_down-2 {
+  right: -18px;
+}
+
+/* Кнопки */
+
+.entire_block {
+  margin: 0px;
+  display: inline;
+}
+
+.login {
+  display: inline;
+  max-width: 99px;
+  height: 34px;
+  margin-right: 20px;
+}
+
+.regist {
+  display: inline;
+  max-width: 196px;
+  height: 34px;
+}
+
+.button,
+.guest-btn {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.button_login {
+  background-color: transparent;
+  border: 3px solid #bc9cff;
+  color: #bc9cff;
+  border-radius: 26px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.button_login:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: white;
+  transition: all 0.3s;
+}
+
+.button_reg,
+.guest-btn {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  padding: 10px 20px;
+  border-radius: 26px;
+  color: #ffffff;
+  border: 3px solid #bc9cff;
+}
+
+.button_reg:hover,
+.guest-btn:hover {
+  background: #ffffff;
+  border: 3px solid #bc9cff;
+  color: #bc9cff;
+  transition: all 0.3s;
+}
+
+.button_login span,
+.button_reg span {
+  background-color: transparent;
+}
+
+/* Мэйн */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(/images/background/mainBG.svg);
+  background-position-y: -70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1100px;
+}
+
+.form {
+  /* position: absolute;
+  top: 130px;
+  left: 250px; */
+  margin-left: 180px;
+  margin-top: 130px;
+  align-self: flex-start;
+  max-width: 380px;
+  height: 374px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.inner_form_content {
+  padding: 40px 30px;
+  max-width: 380px;
+  height: 374px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.form-header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 21px;
+}
+
+.date-inputs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.arrive-input,
+.departure-input {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.arrive-input label,
+.departure-input label,
+.label_guest {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0px 0px 5px 0px;
+}
+
+.first_date,
+.second_date {
+  box-sizing: border-box;
+  max-width: 150px;
+  height: 44px;
+  margin: 0px;
+  padding: 0px 32px 0px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  color: rgba(31, 32, 65, 0.75);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url(/images/other/expand_more.svg);
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  width: 15px;
+}
+
+.guests {
+  position: relative;
+}
+
+#guests_select {
+  margin-top: 5px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  padding: 0px 15px;
+  border-radius: 4px;
+  width: 320px;
+  height: 44px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.expand_menu_guest {
+  display: none;
+  width: 320px;
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 13px 15px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 2px;
+}
+
+.expand_menu_guest.active {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 13px 15px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 2px;
+}
+
+.choose_btn {
+  position: absolute;
+  padding: 10px;
+  top: 26px;
+  right: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.choose_btn img {
+  width: 15px;
+}
+
+.adult_value,
+.kids_value,
+.littles_value {
+  display: flex;
+  align-items: center;
+}
+
+.value_num {
+  margin: 0px 15px;
+}
+
+.adult,
+.kids,
+.littles {
+  margin: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.adults_menu,
+.kids_menu,
+.littles_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guest-btn {
+  margin-top: 31px;
+  width: 320px;
+  cursor: pointer;
+}
+
+.right_side_description {
+  margin-right: 130px;
+  align-self: flex-end;
+  background-color: transparent;
+}
+
+.right_side_description p {
+  background-color: transparent;
+  color: rgba(31, 32, 65, 0.75);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* Нижняя навигация */
+
+.bottom_nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 104px;
+  height: 374px;
+}
+
+.logo_and_descript h2 {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.head_nav a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0px 0px 5px 0px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.nav_item_bot {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.subs_info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  margin-bottom: 20px;
+}
+
+.subs_field {
+  position: relative;
+}
+
+.subs_input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  padding: 0px 15px;
+  border-radius: 4px;
+  width: 260px;
+  height: 44px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.subs_btn {
+  border: none;
+}
+
+.subs_btn img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+}
+
+.upper_foot {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom_foot {
+  border-top: 1px solid rgb(224, 224, 224);
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rights h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.75);
+  margin: 0px;
+  margin-left: 90px;
+}
+
+.social {
+  margin: 0px;
+  margin-right: 90px;
+}
+
+.social_item:not(:last-child) {
+  margin-right: 20px;
+}
