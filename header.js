@@ -40,12 +40,12 @@ function renderHeader() {
 
     <div class="entire_block">
         <div class="login">
-        <a class="button button_login" href="##">
+        <a class="button button_login" href="login.html">
             <span>ВОЙТИ</span>
         </a>
         </div>
         <div class="regist">
-        <a class="button button_reg" href="##">
+        <a class="button button_reg" href="registration.html">
             <span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
         </a>
         </div>
