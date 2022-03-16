@@ -202,12 +202,18 @@ header {
 
 .arrive-input label,
 .departure-input label,
-.label_guest {
+.label_guest,
+.arrival_label,
+.price_label,
+.rules_label,
+.avil_label,
+.add_head {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   margin: 0px 0px 5px 0px;
+  text-transform: uppercase;
 }
 
 .first_date,
@@ -226,6 +232,18 @@ header {
   font-size: 14px;
   line-height: 18px;
   position: relative;
+}
+
+.arrive-btn {
+  position: absolute;
+  left: 345px;
+  top: 375px;
+}
+
+.depart-btn {
+  position: absolute;
+  left: 515px;
+  top: 375px;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -288,19 +306,17 @@ header {
   cursor: pointer;
 }
 
-.choose_btn img {
-  width: 15px;
-}
-
 .adult_value,
 .kids_value,
 .littles_value {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 92px;
 }
 
 .value_num {
-  margin: 0px 15px;
+  margin: 0px;
 }
 
 .adult,
@@ -319,6 +335,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.bottom_expand {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_expand a {
+  text-decoration: none;
+  color: #bc9cff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }
 
 .guest-btn {

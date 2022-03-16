@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/fonts.css" />
     <link rel="stylesheet" href="/loginStyles.css" />
-    <link rel="stylesheet" href="/air-datepicker.css" />
+    <link rel="stylesheet" href="/flatpickr.css" />
+
     <title>Toxin - Отель</title>
   </head>
   <body class="body">
@@ -69,13 +70,50 @@
             <div class="date-inputs">
               <div class="arrive-input">
                 <label for="first_date">ПРИБЫТИЕ</label>
-                <input class="first_date" id="first_date" type="date" />
+                <input
+                  placeholder="ДД.ММ.ГГГГ"
+                  class="first_date"
+                  id="first_date"
+                  type="text"
+                />
+                <a href="##" class="arrive-btn">
+                  <img src="/images/other/expand_more.svg" alt="" />
+                </a>
               </div>
+              <!-- <div class="container-calendar">
+                <div class="calendar">
+                  <div class="month">
+                    <i class="fas fa-angle-left prev"></i>
+                    <div class="date">
+                      <h1></h1>
+                      <p></p>
+                    </div>
+                    <i class="fas fa-angle-right next"></i>
+                  </div>
+                  <div class="weekdays">
+                    <div>ПН</div>
+                    <div>ВТ</div>
+                    <div>СР</div>
+                    <div>ЧТ</div>
+                    <div>ПТ</div>
+                    <div>СБ</div>
+                    <div>ВС</div>
+                  </div>
+                  <div class="days"></div>
+                </div>
+              </div> -->
               <div class="departure-input">
                 <label for="second_date">ВЫЕЗД</label>
-                <input class="second_date" id="second_date" type="date" />
+                <input
+                  placeholder="ДД.ММ.ГГГГ"
+                  class="second_date"
+                  id="second_date"
+                  type="text"
+                />
               </div>
-              <!-- <button class="input_btn">SHOW</button> -->
+              <a href="##" class="depart-btn">
+                <img src="/images/other/expand_more.svg" alt="" />
+              </a>
             </div>
 
             <div class="guests">
@@ -91,11 +129,11 @@
                   <div class="adults_menu">
                     <p class="adult">ВЗРОСЛЫЕ</p>
                     <div class="adult_value">
-                      <a href="##"
+                      <a class="prevBtn" href="##"
                         ><img src="/images/other/minus.svg" alt=""
                       /></a>
-                      <h4 class="value_num">1</h4>
-                      <a href="##"
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
                         ><img src="/images/other/plus.svg" alt=""
                       /></a>
                     </div>
@@ -103,11 +141,11 @@
                   <div class="kids_menu">
                     <p class="kids">ДЕТИ</p>
                     <div class="kids_value">
-                      <a href="##"
+                      <a class="prevBtn" href="##"
                         ><img src="/images/other/minus.svg" alt=""
                       /></a>
-                      <h4 class="value_num">1</h4>
-                      <a href="##"
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
                         ><img src="/images/other/plus.svg" alt=""
                       /></a>
                     </div>
@@ -115,14 +153,18 @@
                   <div class="littles_menu">
                     <p class="littles">МЛАДЕНЦЫ</p>
                     <div class="littles_value">
-                      <a href="##"
+                      <a class="prevBtn" href="##"
                         ><img src="/images/other/minus.svg" alt=""
                       /></a>
-                      <h4 class="value_num">1</h4>
-                      <a href="##"
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
                         ><img src="/images/other/plus.svg" alt=""
                       /></a>
                     </div>
+                  </div>
+                  <div class="bottom_expand">
+                    <a class="clearBtn" href="##">Очистить</a>
+                    <a class="acceptBtn" href="##">Применить</a>
                   </div>
                 </div>
                 <a href="##" class="choose_btn">
@@ -252,7 +294,9 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="/air-datepicker.js"></script> -->
+    <script src="flatpickr.js"></script>
+    <script src="/changeNumGuest.js"></script>
+    <script src="/calendar.js"></script>
     <script src="/login.js"></script>
     <script src="/sctipt.js"></script>
   </body>

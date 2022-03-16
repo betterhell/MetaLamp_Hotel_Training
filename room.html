@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/roomStyles.css" />
+    <title>Наши номера</title>
+  </head>
+  <body>
+    <header>
+      <script src="/header.js"></script>
+    </header>
+    <main>
+      <div class="container_all">
+        <div class="container-left-side">
+          <div class="sorting">
+            <div class="calendar-drowup">
+              <label class="arrival_label" for="arrival"
+                >даты прибывания в отеле</label
+              >
+              <input id="arrival" type="text" />
+            </div>
+            <div class="guests">
+              <label class="label_guest" for="guests_select">ГОСТИ</label>
+              <form class="form_guest" action="##">
+                <input
+                  readonly
+                  placeholder="Сколько гостей"
+                  id="guests_select"
+                  type="text"
+                />
+                <div class="expand_menu_guest">
+                  <div class="adults_menu">
+                    <p class="adult">ВЗРОСЛЫЕ</p>
+                    <div class="adult_value">
+                      <a class="prevBtn" href="##"
+                        ><img src="/images/other/minus.svg" alt=""
+                      /></a>
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
+                        ><img src="/images/other/plus.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="kids_menu">
+                    <p class="kids">ДЕТИ</p>
+                    <div class="kids_value">
+                      <a class="prevBtn" href="##"
+                        ><img src="/images/other/minus.svg" alt=""
+                      /></a>
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
+                        ><img src="/images/other/plus.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="littles_menu">
+                    <p class="littles">МЛАДЕНЦЫ</p>
+                    <div class="littles_value">
+                      <a class="prevBtn" href="##"
+                        ><img src="/images/other/minus.svg" alt=""
+                      /></a>
+                      <h4 class="value_num"></h4>
+                      <a class="nextBtn" href="##"
+                        ><img src="/images/other/plus.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="bottom_expand">
+                    <a class="clearBtn" href="##">Очистить</a>
+                    <a class="acceptBtn" href="##">Применить</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="price_value_block">
+              <div class="price_naming">
+                <label class="price_label" for="middle">диапазон цены</label>
+                <p class="price_value">5 000₽ - 10 000₽</p>
+              </div>
+              <div class="middle">
+                <div class="multi-range-slider">
+                  <input
+                    type="range"
+                    id="input-left"
+                    min="0"
+                    max="100"
+                    value="25"
+                  />
+                  <input
+                    type="range"
+                    id="input-right"
+                    min="0"
+                    max="100"
+                    value="75"
+                  />
+
+                  <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left"></div>
+                    <div class="thumb right"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="price_per_day">
+                Стоимость за сутки пребывания в номере
+              </p>
+            </div>
+
+            <div class="home_rules">
+              <label class="rules_label" for="">Правила дома</label>
+              <div class="input_rules">
+                <input type="checkbox" name="smoking" id="smoking" />
+                <label for="smoking">Можно курить</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="pets" id="pets" />
+                <label for="pets">Можно c питомцами</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="inviting" id="ingviting" />
+                <label for="ingviting"
+                  >Можно пригласить гостей <br />
+                  (до 10 человек)</label
+                >
+              </div>
+            </div>
+
+            <div class="avilability">
+              <label class="avil_label" for="">Доступность</label>
+              <div class="input_avil">
+                <input type="checkbox" name="corridor" id="corridor" />
+                <div class="labels_avil">
+                  <label class="corridor_label" for="corridor"
+                    >Широкий коридор <br />
+                    <span>Широкий коридор в номере не менее 91 см.</span></label
+                  >
+                </div>
+              </div>
+              <div class="input_avil">
+                <input type="checkbox" name="invalid" id="invalid" />
+                <div class="labels_avil">
+                  <label class="invalid_label" for="invalid"
+                    >Помошник для инвалидов <br />
+                    <span
+                      >На 1 этаже вас встретит специалист и проводит до
+                      номера.</span
+                    ></label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="facilities">
+            <label class="label_guest" for="guests_select"
+              >Удобства номера</label
+            >
+            <form class="form_facil" action="##">
+              <input
+                readonly
+                placeholder="Выберите удобства"
+                id="facil_select"
+                type="text"
+              />
+              <div class="expand_menu_facil">
+                <div class="adults_menu">
+                  <p class="adult">СПАЛЬНИ</p>
+                  <div class="adult_value">
+                    <a class="prevBtn" href="##"
+                      ><img src="/images/other/minus.svg" alt=""
+                    /></a>
+                    <h4 class="value_num"></h4>
+                    <a class="nextBtn" href="##"
+                      ><img src="/images/other/plus.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="kids_menu">
+                  <p class="kids">КРОВАТИ</p>
+                  <div class="kids_value">
+                    <a class="prevBtn" href="##"
+                      ><img src="/images/other/minus.svg" alt=""
+                    /></a>
+                    <h4 class="value_num"></h4>
+                    <a class="nextBtn" href="##"
+                      ><img src="/images/other/plus.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="littles_menu">
+                  <p class="littles">ВАННЫЕ КОМНАТЫ</p>
+                  <div class="littles_value">
+                    <a class="prevBtn" href="##"
+                      ><img src="/images/other/minus.svg" alt=""
+                    /></a>
+                    <h4 class="value_num"></h4>
+                    <a class="nextBtn" href="##"
+                      ><img src="/images/other/plus.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="bottom_expand">
+                  <a class="clearBtn" href="##">Очистить</a>
+                  <a class="acceptBtn" href="##">Применить</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="additionally">
+            <h3 class="add_head">дополнительные удобства</h3>
+            <div class="add_items">
+              <div class="input_rules">
+                <input type="checkbox" name="breakfast" id="breakfast" />
+                <label for="breakfast">Завтрак</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="table" id="table" />
+                <label for="table">Пиьсменный стол</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="chair" id="chair" />
+                <label for="chair">Стул для кормления</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="crib" id="crib" />
+                <label for="crib">Кроватка</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="TV" id="TV" />
+                <label for="TV">Телевизор</label>
+              </div>
+              <div class="input_rules">
+                <input type="checkbox" name="Shampoo" id="Shampoo" />
+                <label for="Shampoo">Шампунь</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-right-side">
+          <h2>Номера, которые мы для вас подобрали</h2>
+          <div class="cards"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script src="/footer.js"></script>
+    </footer>
+    <script src="/doubleRanger.js"></script>
+    <script src="/changeNumGuest.js"></script>
+    <script src="/cards.js"></script>
+  </body>
+</html>

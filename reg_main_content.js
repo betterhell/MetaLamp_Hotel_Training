@@ -64,7 +64,7 @@ function renderMain() {
           </form>
           <div class="create_login log_in">
             <h3 class="no_acc ready_acc">Уже есть аккаунт на Toxin?</h3>
-            <a class="button button_login btn_create_login log_in" href="##">
+            <a class="button button_login btn_create_login log_in" href="login.html">
               <span>ВОЙТИ</span>
             </a>
           </div>
