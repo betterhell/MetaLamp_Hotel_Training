@@ -148,8 +148,8 @@ header {
 .background_form {
   background-image: url(/images/background/loginBG.svg);
   background-position-y: -230px;
-  background-size: cover;
-  height: 772px;
+  background-size: 100% 150%;
+  height: 702px;
   display: flex;
   justify-content: center;
   align-items: center;

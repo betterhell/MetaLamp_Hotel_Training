@@ -10,10 +10,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .logo_block {
-  margin-right: 500px;
+  margin-right: 300px;
 }
 
 .nav {
@@ -106,6 +107,12 @@ header {
   line-height: 15px;
 }
 
+.arrow_forward_guest {
+  position: relative;
+  left: 70px;
+  background-color: transparent;
+}
+
 .button_login {
   background-color: transparent;
   border: 3px solid #bc9cff;
@@ -153,6 +160,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 1100px;
+  position: relative;
 }
 
 .form {
@@ -184,6 +192,7 @@ header {
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 21px;
+  margin-top: 0
 }
 
 .date-inputs {
@@ -272,7 +281,8 @@ header {
   color: rgba(31, 32, 65, 0.75);
 }
 
-.expand_menu_guest {
+.expand_menu_guest,
+.expand_menu_facil {
   display: none;
   width: 320px;
   box-sizing: border-box;
@@ -286,7 +296,8 @@ header {
   border-radius: 2px;
 }
 
-.expand_menu_guest.active {
+.expand_menu_guest.active,
+.expand_menu_facil.active {
   opacity: 1;
   display: flex;
   flex-direction: column;
@@ -295,20 +306,24 @@ header {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 2px;
+  z-index: 2;
 }
 
 .choose_btn {
   position: absolute;
-  padding: 10px;
-  top: 26px;
-  right: 0px;
+  padding: 8px;
+  top: 29px;
+  right: 8px;
   border: none;
   cursor: pointer;
 }
 
 .adult_value,
 .kids_value,
-.littles_value {
+.littles_value,
+.bedrooms_value,
+.beds_value,
+.bathrooms_value {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -320,8 +335,11 @@ header {
 }
 
 .adult,
+.bedrooms,
 .kids,
-.littles {
+.beds,
+.littles,
+.bathrooms {
   margin: 0px;
   font-style: normal;
   font-weight: bold;
@@ -330,8 +348,11 @@ header {
 }
 
 .adults_menu,
+.bedrooms_menu,
 .kids_menu,
-.littles_menu {
+.beds_menu,
+.littles_menu,
+.bathrooms_menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -356,10 +377,16 @@ header {
   margin-top: 31px;
   width: 320px;
   cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
 
 .right_side_description {
+  position: absolute;
   margin-right: 130px;
+  right: 30px;
+  bottom: 100px;
   align-self: flex-end;
   background-color: transparent;
 }

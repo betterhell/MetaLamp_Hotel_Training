@@ -1,6 +1,9 @@
-const rooms = [
+let rooms = [
   {
-    img: "/images/rooms/room1.svg",
+    img1: "/images/rooms/room1.svg",
+    img2: "/images/rooms/room2.svg",
+    img3: "/images/rooms/room3.svg",
+    img4: "/images/rooms/room4.svg",
     number: 888,
     luxe: "люкс",
     price: 9990,
@@ -22,7 +25,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room2.svg",
+    img1: "/images/rooms/room2.svg",
+    img2: "/images/rooms/room3.svg",
+    img3: "/images/rooms/room4.svg",
+    img4: "/images/rooms/room5.svg",
     number: 840,
     luxe: " ",
     price: 9900,
@@ -43,7 +49,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room3.svg",
+    img1: "/images/rooms/room3.svg",
+    img2: "/images/rooms/room4.svg",
+    img3: "/images/rooms/room5.svg",
+    img4: "/images/rooms/room6.svg",
     number: 980,
     luxe: "люкс",
     price: 8500,
@@ -64,7 +73,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room4.svg",
+    img1: "/images/rooms/room4.svg",
+    img2: "/images/rooms/room5.svg",
+    img3: "/images/rooms/room6.svg",
+    img4: "/images/rooms/room7.svg",
     number: 856,
     luxe: " ",
     price: 7300,
@@ -85,7 +97,10 @@ const rooms = [
     shampoo: false,
   },
   {
-    img: "/images/rooms/room5.svg",
+    img1: "/images/rooms/room5.svg",
+    img2: "/images/rooms/room6.svg",
+    img3: "/images/rooms/room7.svg",
+    img4: "/images/rooms/room8.svg",
     number: 740,
     luxe: " ",
     price: 6000,
@@ -106,7 +121,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room6.svg",
+    img1: "/images/rooms/room6.svg",
+    img2: "/images/rooms/room7.svg",
+    img3: "/images/rooms/room8.svg",
+    img4: "/images/rooms/room9.svg",
     number: 982,
     luxe: " ",
     price: 5800,
@@ -127,7 +145,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room7.svg",
+    img1: "/images/rooms/room7.svg",
+    img2: "/images/rooms/room8.svg",
+    img3: "/images/rooms/room9.svg",
+    img4: "/images/rooms/room10.svg",
     number: 678,
     luxe: " ",
     price: 5500,
@@ -148,7 +169,10 @@ const rooms = [
     shampoo: false,
   },
   {
-    img: "/images/rooms/room8.svg",
+    img1: "/images/rooms/room8.svg",
+    img2: "/images/rooms/room9.svg",
+    img3: "/images/rooms/room10.svg",
+    img4: "/images/rooms/room11.svg",
     number: 450,
     luxe: " ",
     price: 5300,
@@ -169,7 +193,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room9.svg",
+    img1: "/images/rooms/room9.svg",
+    img2: "/images/rooms/room10.svg",
+    img3: "/images/rooms/room11.svg",
+    img4: "/images/rooms/room12.svg",
     number: 350,
     luxe: " ",
     price: 5000,
@@ -190,7 +217,10 @@ const rooms = [
     shampoo: true,
   },
   {
-    img: "/images/rooms/room10.svg",
+    img1: "/images/rooms/room10.svg",
+    img2: "/images/rooms/room11.svg",
+    img3: "/images/rooms/room12.svg",
+    img4: "/images/rooms/room1.svg",
     number: 666,
     luxe: " ",
     price: 5000,
@@ -211,7 +241,10 @@ const rooms = [
     shampoo: false,
   },
   {
-    img: "/images/rooms/room11.svg",
+    img1: "/images/rooms/room11.svg",
+    img2: "/images/rooms/room12.svg",
+    img3: "/images/rooms/room1.svg",
+    img4: "/images/rooms/room2.svg",
     number: 444,
     luxe: " ",
     price: 5000,
@@ -232,7 +265,10 @@ const rooms = [
     shampoo: false,
   },
   {
-    img: "/images/rooms/room12.svg",
+    img1: "/images/rooms/room12.svg",
+    img2: "/images/rooms/room1.svg",
+    img3: "/images/rooms/room2.svg",
+    img4: "/images/rooms/room5.svg",
     number: 352,
     luxe: " ",
     price: 5000,
@@ -256,13 +292,26 @@ const rooms = [
 
 const placeForItems = document.querySelector(".cards");
 
-const renderCards = () => {
+const renderCards = (currentRooms) => {
   placeForItems.innerHTML = "";
-  rooms.forEach((item) => {
+  currentRooms.forEach((item) => {
     placeForItems.innerHTML += `<div class="room">
-        <div class="img_room_block">
-          <img src="${item.img}" alt="Комната" />
+        <div class="img_block_all">
+          <div class="img_room_block">
+            <img class="img1" src="${item.img1}" alt="Комната" />
+            <img class="img1" src="${item.img2}" alt="Комната2" />
+            <img class="img1" src="${item.img3}" alt="Комната3" />
+            <img class="img1" src="${item.img4}" alt="Комната4" />
+          </div>
+          <img class="left_slider_btn" src="/images/other/expand_more_white_left.svg" alt="Комната" />
+          <img class="right_slider_btn" src="/images/other/expand_more_white_right.svg" alt="Комната" />
         </div>
+        <div class="dots_slider">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         <div class="bottom_room_block">
           <div class="price_room_block">
           <a href="##"><h3><span class="num_mark"> №</span>${
@@ -309,4 +358,4 @@ const renderCards = () => {
       </div>`;
   });
 };
-renderCards();
+renderCards(rooms);

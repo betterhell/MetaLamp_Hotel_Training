@@ -1,23 +1,81 @@
 .container_all {
+  padding-top: 30px;
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
+  justify-content: center;
+
+}
+
+/* ================================ */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* формируем внешний вид чекбокса в псевдоэлементе before */
+.labels:before,
+.corridor_label:before,
+.invalid_label:before {
+  content: url(/images/other/uncheck.svg);
+  margin: 0px 5px 0px 0px;
+  position: relative;
+  text-align: center;
+  text-indent: 0px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+/* checked */
+input:checked + label:before {
+  content: url(/images/other/checked.svg);
+}
+
+/* disabled */
+input:disabled + label:before {
+  content: url(/images/other/uncheck.svg);
+}
+
+.add_head {
+  cursor: pointer;
+  user-select: none;
+}
+
+.add_items {
+  margin-top: 17.5px;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 4;
+  transition: all 0.3s ease-in-out;
+}
+
+.additionally {
+  position: relative;
+}
+
+.add_items.active {
+  max-height: 200px;
 }
 
 /* Left Side */
 
 .container-left-side {
   max-width: 266px;
+  margin-right: 60px;
 }
 
 .calendar-drowup {
   margin-bottom: 21px;
+  position: relative;
 }
 
 .guests,
 .facilities {
   position: relative;
   margin-bottom: 30px;
+}
+
+.rooms_expand {
+  width: 266px;
 }
 
 #guests_select,
@@ -37,12 +95,11 @@
   position: relative;
 }
 
-.expand_menu_guest {
+.expand_menu_facil {
   display: none;
-  width: 320px;
+  width: 266px;
   box-sizing: border-box;
   position: absolute;
-  opacity: 0;
   flex-direction: column;
   justify-content: center;
   padding: 13px 15px;
@@ -51,24 +108,9 @@
   border-radius: 2px;
 }
 
-.expand_menu_guest.active {
-  opacity: 1;
+.expand_menu_facil.active {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 13px 15px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  border-radius: 2px;
-}
-
-.choose_btn {
-  position: absolute;
-  padding: 10px;
-  top: 26px;
-  right: 0px;
-  border: none;
-  cursor: pointer;
+  z-index: 3;
 }
 
 .adult_value,
@@ -202,12 +244,13 @@
   display: flex;
 }
 
-.corridor_label > span,
-.invalid_label > span {
+.corridor_label > div,
+.invalid_label > div {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
   color: rgba(31, 32, 65, 0.5);
+  padding-left: 25px;
 }
 
 /* Double ranger */
@@ -301,9 +344,30 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
+.btn_arrival,
+.btn_guests,
+.btn_facil {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  padding: 8px;
+}
+
+.btn_add {
+  position: absolute;
+  right: 15px;
+  top: -9px;
+  padding: 5px;
+}
+
 /* Right Side */
 
+.container-right-side {
+  min-width: 846px;
+}
+
 .container-right-side > h2 {
+  margin-top: 0px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -314,6 +378,64 @@ input[type="range"]::-webkit-slider-thumb {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+/* Слайдер изображений */
+
+.img_block_all {
+  width: 271px;
+  height: 152px;
+  overflow: hidden;
+}
+
+.img_room_block {
+  max-width: 813px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+.left_slider_btn {
+  opacity: 1;
+  left: 8px;
+  padding: 50px 10px;
+  position: relative;
+  bottom: 133px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.right_slider_btn {
+  opacity: 1;
+  padding: 50px 10px;
+  right: -203px;
+  position: relative;
+  bottom: 133px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dots_slider {
+  position: relative;
+  bottom: 20px;
+  left: 100px;
+  display: flex;
+  background-color: transparent;
+}
+
+.dots_slider > span {
+  width: 6.5px;
+  height: 6.5px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  margin-right: 5px;
+  cursor: pointer;
+}
+.dots_slider > span.active {
+  background-color: white;
+}
+
+/* ====================== */
 
 .cards {
   display: grid;
@@ -330,7 +452,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 270px;
+  max-width: 271px;
   height: 257px;
   margin: 0px 12px 20px 0px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -411,4 +533,54 @@ input[type="range"]::-webkit-slider-thumb {
 
 .review_room {
   margin-left: 12.5px;
+}
+
+/* ==================== */
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pag_items {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.pags {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.first_pag {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: white;
+}
+
+.next_pag {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  color: white;
+  position: relative;
+}
+
+.next_pag > img {
+  background-color: transparent;
+  position: absolute;
+  top:12px;
+  left: 12px;
+}
+
+.info_pag {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }

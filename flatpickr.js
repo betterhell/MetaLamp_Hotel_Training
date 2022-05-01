@@ -3211,6 +3211,19 @@
 });
 
 flatpickr.localize(flatpickr.l10ns.ru);
+
 flatpickr("#first_date", {
   mode: "range",
+  plugins: [new rangePlugin({ input: "#second_date" })],
+  dateFormat: "d.m.Y",
+  minDate: "today",
+  maxDate: new Date().fp_incr(14),
+});
+
+flatpickr("#arrival", {
+  mode: "range",
+  conjunction: "по",
+  dateFormat: "d.m.Y",
+  minDate: "today",
+  maxDate: new Date().fp_incr(14),
 });
