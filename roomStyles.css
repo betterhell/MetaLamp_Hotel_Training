@@ -15,7 +15,7 @@ input[type="checkbox"] {
 .labels:before,
 .corridor_label:before,
 .invalid_label:before {
-  content: url(/images/other/uncheck.svg);
+  content: url(s/other/uncheck.svg);
   margin: 0px 5px 0px 0px;
   position: relative;
   text-align: center;
@@ -27,12 +27,12 @@ input[type="checkbox"] {
 /* вариации внешнего вида в зав-ти от статуса checkbox */
 /* checked */
 input:checked + label:before {
-  content: url(/images/other/checked.svg);
+  content: url(images/other/checked.svg);
 }
 
 /* disabled */
 input:disabled + label:before {
-  content: url(/images/other/uncheck.svg);
+  content: url(images/other/uncheck.svg);
 }
 
 .add_head {

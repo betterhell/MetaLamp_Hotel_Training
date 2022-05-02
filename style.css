@@ -155,7 +155,7 @@ header {
 .main {
   display: flex;
   justify-content: space-between;
-  background-image: url(/images/background/mainBG.svg);
+  background-image: url(images/background/mainBG.svg);
   background-position-y: -70px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -256,7 +256,7 @@ header {
 }
 
 ::-webkit-calendar-picker-indicator {
-  background-image: url(/images/other/expand_more.svg);
+  background-image: url(images/other/expand_more.svg);
   position: absolute;
   right: 10px;
   top: 13px;
