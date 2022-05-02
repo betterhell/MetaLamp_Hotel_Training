@@ -5,7 +5,7 @@ function renderHeader() {
   header.innerHTML += `
     <div class="logo_block">
         <a href="index.html"
-        ><img class="logo" src="/images/logo/Logo.svg" alt="Логотип"
+        ><img class="logo" src="images/logo/Logo.svg" alt="Логотип"
         /></a>
     </div>
 
@@ -17,7 +17,7 @@ function renderHeader() {
             >Услуги
             <img
                 class="arrow_down"
-                src="/images/other/expand_more.svg"
+                src="images/other/expand_more.svg"
                 alt=""
             /></a>
         </li>
@@ -30,7 +30,7 @@ function renderHeader() {
             >Соглашения
             <img
                 class="arrow_down arrow_down-2"
-                src="/images/other/expand_more.svg"
+                src="images/other/expand_more.svg"
                 alt=""
             />
             </a>

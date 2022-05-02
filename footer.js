@@ -5,7 +5,7 @@ function renderFooter() {
   <div class="upper_foot">
   <div class="bottom_nav">
     <div class="logo_and_descript">
-      <a href="##"><img src="/images/logo/Logo.svg" alt="" /></a>
+      <a href="##"><img src="images/logo/Logo.svg" alt="" /></a>
       <h2>
         Бронирование номеров в лучшем <br />
         отеле 2019 года по версии <br />
@@ -87,7 +87,7 @@ function renderFooter() {
             type="email"
           />
           <button class="subs_btn">
-            <img src="/images/other/arrowright.svg" alt="" />
+            <img src="images/other/arrowright.svg" alt="" />
           </button>
         </form>
       </div>
@@ -100,13 +100,13 @@ function renderFooter() {
   </div>
   <div class="social">
     <a class="social_item" href="##"
-      ><img src="/images/other/twitter.svg" alt=""
+      ><img src="images/other/twitter.svg" alt=""
     /></a>
     <a class="social_item" href="##"
-      ><img src="/images/other/facebook.svg" alt=""
+      ><img src="images/other/facebook.svg" alt=""
     /></a>
     <a class="social_item" href="##"
-      ><img src="/images/other/instagram.svg" alt=""
+      ><img src="images/other/instagram.svg" alt=""
     /></a>
   </div>
 </div>`;

@@ -11,8 +11,8 @@ const renderCards = () => {
             <img src="${item.img3}" alt="Комната3" />
             <img src="${item.img4}" alt="Комната4" />
           </div>
-          <img class="left_slider_btn" src="/images/other/expand_more_white_left.svg" alt="Комната" />
-          <img class="right_slider_btn" src="/images/other/expand_more_white_right.svg" alt="Комната" />
+          <img class="left_slider_btn" src="images/other/expand_more_white_left.svg" alt="Комната" />
+          <img class="right_slider_btn" src="images/other/expand_more_white_right.svg" alt="Комната" />
         </div>
         <div class="dots_slider">
             <span class="active"></span>
@@ -32,28 +32,28 @@ const renderCards = () => {
             <div class="stars">
               <img src="${
                 item.rating >= 0
-                  ? "/images/other/star.svg"
-                  : "/images/other/star_border.svg"
+                  ? "images/other/star.svg"
+                  : "images/other/star_border.svg"
               }" alt="Звезда" />
               <img src="${
                 item.rating >= 2
-                  ? "/images/other/star.svg"
-                  : "/images/other/star_border.svg"
+                  ? "images/other/star.svg"
+                  : "images/other/star_border.svg"
               }" alt="Звезда" />
               <img src="${
                 item.rating >= 3
-                  ? "/images/other/star.svg"
-                  : "/images/other/star_border.svg"
+                  ? "images/other/star.svg"
+                  : "images/other/star_border.svg"
               }" alt="Звезда" />
               <img src="${
                 item.rating >= 4
-                  ? "/images/other/star.svg"
-                  : "/images/other/star_border.svg"
+                  ? "images/other/star.svg"
+                  : "images/other/star_border.svg"
               }" alt="Звезда" />
               <img src="${
                 item.rating >= 5
-                  ? "/images/other/star.svg"
-                  : "/images/other/star_border.svg"
+                  ? "images/other/star.svg"
+                  : "images/other/star_border.svg"
               }" alt="Звезда" />
             </div>
             <div class="review_room">
