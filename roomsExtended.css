@@ -1,0 +1,65 @@
+/* Страница с подробным описанием номеров */
+
+.main_imgs_block {
+    display: grid;
+    grid-template-columns: 981px 459px;
+    justify-content: center;
+}
+
+.main_small_imgs {
+    margin-top: 6px;
+}
+
+.main_small_imgs img {
+    margin-top: -6px;
+}
+
+.main_info_block {
+    display: flex;
+    justify-content: space-around;
+}
+
+.info_about_number {
+    display: grid;
+    justify-content: center;
+}
+
+.info_about_number h2 {
+    color: #1F2041;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.commfort_info,.facility_info,.cosiness_info {
+    padding: 17px 0px;
+    display: flex;
+}
+
+.commfort_info,.facility_info {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+
+.commfort_info h4,.facility_info h4 ,.cosiness_info h4 {
+    color: rgba(31, 32, 65, 0.75);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px
+}
+
+.commfort_info p,.facility_info p ,.cosiness_info p {
+    color: rgba(31, 32, 65, 0.75);
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0px;
+}
+
+.commfort_inner_info,.facility_inner_info,.cosiness_inner_info {
+    margin-left: 10px;
+}
+
+.graph {
+    width: 300px;
+    height: 0px;
+}
